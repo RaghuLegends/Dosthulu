@@ -30,6 +30,9 @@
 }
 
 body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
   font-family: var(--font-family);
   line-height: var(--line-height);
   color: var(--text-color);
@@ -159,15 +162,15 @@ img {
   gap: var(--spacing-md);
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
-/* styles.css */
+
+/* Footer styles */
 footer {
     background-color: #333; /* Dark background */
     color: white; /* White text */
     text-align: center; /* Center the text */
     padding: 20px 0; /* Some space around the footer */
-    position: relative;
-    bottom: 0;
     width: 100%;
+    margin-top: auto; /* Ensures it sticks to the bottom of the page */
 }
 
 footer a {
@@ -178,4 +181,23 @@ footer a {
 
 footer a:hover {
     text-decoration: underline; /* Underline when hovered */
+}
+
+footer p {
+    margin-bottom: var(--spacing-xs);
+}
+
+footer a:visited {
+    color: #ccc; /* Light gray for visited links */
+}
+
+/* Responsive footer adjustments */
+@media (max-width: 768px) {
+    footer {
+        padding: 15px 10px;
+    }
+
+    footer p {
+        font-size: 0.9rem;
+    }
 }
